@@ -13,10 +13,13 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.date_select :name %>
+    <%= f.text_field :name %>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+<%= link_to 'New Patient', new_patient_path %>
+<%= link_to 'New Appointment', new_appointment_path

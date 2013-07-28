@@ -1,5 +1,6 @@
 class PatientsController < ApplicationController
-
+ # GET /appointments
+  # GET /appointments.json
   def index
     @patients = Patient.all
 

@@ -14,7 +14,7 @@
     <td><%= physician.name %></td>
 
     <td><%= link_to 'Show', physician %></td>
-    <td><%= link_to 'Edit', edit_physician_path(phyisician) %></td>
+    <td><%= link_to 'Edit', edit_physician_path(physician) %></td>
     <td><%= link_to 'Destroy', physician, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
@@ -22,4 +22,5 @@
 
 <br />
 
+<%= link_to 'New Physician', new_physician_path %>
 <%= link_to 'New Appointment', new_appointment_path %>
