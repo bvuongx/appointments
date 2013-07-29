@@ -12,6 +12,16 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :physician %><br>
+    <%= f.collection_select(:physician_id, Physician.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :patient %><br>
+    <%= f.collection_select(:patient_id, Patient.all, :id, :name) %>
+  </div>
+
+
+  <div class="field">
     <%= f.label :date %><br />
     <%= f.date_select :date %>
   </div>

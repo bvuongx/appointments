@@ -1,9 +1,4 @@
 <h1>Listing appointments</h1>
-<h2>Enter a patient:</h2>
-<%= link_to "Patients", :patients %>
-
-<h2>Enter a physician:</h2>
-<%= link_to "Physicians", :physicians %>
 
 <table>
   <tr>
@@ -18,6 +13,8 @@
   <tr>
     <td><%= appointment.date %></td>
     <td><%= appointment.time %></td>
+        <td><%= appointment.physician.name %></td>
+        <td><%= appointment.patient.name %></td>
     <td><%= link_to 'Show', appointment %></td>
     <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
     <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

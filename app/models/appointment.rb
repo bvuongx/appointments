@@ -1,8 +1,6 @@
 class Appointment < ActiveRecord::Base
-  attr_accessible :date, :time
+  attr_accessible :date, :time, :physician_id, :patient_id
 
-  belongs_to :physicians
-  belongs_to :patients
-
-  accepts_nested_attributes_for :physicians
+  belongs_to :physician
+  belongs_to :patient
 end

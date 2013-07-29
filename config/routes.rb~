@@ -1,17 +1,9 @@
 Appointments::Application.routes.draw do
 
     resources :appointments
-
-  resources :physicians do
-    resources :patients
-    resources :appointments
-  end
-
-
-  resources :patients do
     resources :physicians
-    resources :appointments
-  end
+    resources :patients
+
 
   root :to => "appointments#index"
 
